@@ -8,37 +8,11 @@
 
 local status_ok, lspsagaM = pcall(require, "lspsaga")
 if not status_ok then
-	vim.notify("lspsaga" .. " not found!")
-	return
+  vim.notify("lspsaga" .. " not found!")
+  return
 end
 
-local opts = { noremap = true, silent = true }
-
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
-vim.keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts)
--- vim.keymap.set("n", "gs", "<Cmd>Lspsaga signature_help<CR>", opts)
-vim.keymap.set("n", "gd", "<cmd>Lspsaga preview_definition<CR>", opts)
-vim.keymap.set("n", "gR", "<cmd>Lspsaga rename<CR>", opts)
--- vim.keymap.set("n", "gq", "<cmd>Lspsaga code_action<CR>", opts)
-vim.keymap.set("n", "gq", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-vim.keymap.set(
-	"v",
-	"gq",
-	"<Esc><cmd>lua vim.lsp.buf.code_action()<CR>",
-	-- "<Esc><Cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
-	opts
-)
-vim.keymap.set("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
-vim.keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
--- vim.keymap.set("n", "gr", "<cmd>Trouble lsp_references<cr>", opts)
--- vim.keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
--- vim.keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
-
--- vim.keymap.set("v", "<leader>Ca", "<cmd><C-U>Lspsaga range_code_action<CR>", opts)
-
 ------------------------------------------------------------------------------------------
-
-----
 -- K
 -- scroll down hover doc or scroll in definition preview
 -- vim.keymap.set("n", "<C-f>", function()
@@ -52,42 +26,41 @@ vim.keymap.set("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 --- config
 
 local config = {
-	border_style = "rounded",
-	finder_request_timeout = 15000,
-	finder_action_keys = {
-		open = "o",
-		vsplit = "s",
-		split = "i",
-		tabe = "t",
-		quit = "q",
-		scroll_down = "<C-f>",
-		scroll_up = "<C-d>", -- quit can be a table
-	},
-	code_action_keys = {
-		quit = "q",
-		exec = "<CR>",
-	},
-	rename_action_quit = "<C-c>",
-	code_action_icon = "💡",
-	code_action_lightbulb = {
-		enable = true,
-		sign = false,
-		enable_in_insert = true,
-		sign_priority = 20,
-		virtual_text = false,
-	}, -- show symbols in winbar must nightly
-	symbol_in_winbar = {
-		-- in_custom = true,
-		-- enable = true,
-		-- separator = " ",
-		-- click_support = false,
-	},
-	-- custom_kind = {
-	-- 	Field = "#000099",
-	-- 	-- Field = { "Variable", "#009999" },
-	-- },
+  border_style = "rounded",
+  finder_request_timeout = 15000,
+  finder_action_keys = {
+    open = "o",
+    vsplit = "s",
+    split = "i",
+    tabe = "t",
+    quit = "q",
+    scroll_down = "<C-f>",
+    scroll_up = "<C-d>", -- quit can be a table
+  },
+  code_action_keys = {
+    quit = "q",
+    exec = "<CR>",
+  },
+  rename_action_quit = "<C-c>",
+  code_action_icon = "💡",
+  code_action_lightbulb = {
+    enable = true,
+    sign = false,
+    enable_in_insert = true,
+    sign_priority = 20,
+    virtual_text = false,
+  }, -- show symbols in winbar must nightly
+  symbol_in_winbar = {
+    -- in_custom = true,
+    -- enable = true,
+    -- separator = " ",
+    -- click_support = false,
+  },
+  -- custom_kind = {
+  -- 	Field = "#000099",
+  -- 	-- Field = { "Variable", "#009999" },
+  -- },
 }
-
 -- local saga = require("lspsaga")
 -- lspsaga.setup()
 
