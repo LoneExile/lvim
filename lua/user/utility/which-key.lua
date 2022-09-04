@@ -97,11 +97,11 @@ lvim.builtin.which_key.mappings = {
       "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
       "Harpoon",
     },
-    a = {
+    s = {
       "<cmd>lua require('harpoon.mark').add_file()<cr>",
       "Add File",
     },
-    A = {
+    a = {
       "<cmd>OpenHarpoonAll<cr>",
       "Open all",
     },
@@ -396,9 +396,29 @@ lvim.builtin.which_key.mappings = {
   -- 		"Debug Print Var",
   -- 	},
   -- },
+}
 
-  -- T = {
-  --   name = "Treesitter",
-  --   i = { ":TSConfigInfo<cr>", "Info" },
-  -- },
+lvim.builtin.terminal.execs = {
+  { "lazygit", "<leader>gg", "LazyGit", "float" },
+  { "lazygit", "<leader>tg", "LazyGit", "float" },
+  {
+    "nnn -er",
+    "<leader>tn",
+    "nnn",
+    "float",
+  },
+  {
+    "htop",
+    "<leader>th",
+    "htop",
+    "float",
+  },
+}
+
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Terminal",
+  t = {
+    "<cmd>ToggleTerm<CR>",
+    "Terminal",
+  },
 }

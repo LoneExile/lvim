@@ -58,7 +58,7 @@ lvim.plugins = {
     "metakirby5/codi.vim",
     cmd = "Codi",
   }, -- interactive scratchpad
-  { "luukvbaal/nnn.nvim" },
+  -- { "luukvbaal/nnn.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   -- { "nvim-telescope/telescope-project.nvim" },
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."

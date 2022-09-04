@@ -36,11 +36,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
       -- vim.cmd([[highlight Variable guifg=#E06C75]])
 
-      -- WinBar         xxx cterm=bold gui=bold
-      -- vim.cmd([[highlight WinBar guifg='#000099' ]])
-      -- CmpItemKind    xxx guifg=#61afef
-      -- vim.cmd([[highlight CmpItemKind guifg='#000099' ]])
-
       vim.cmd([[highlight CodiVirtualText guifg=cyan]])
       vim.cmd([[highlight IndentBlanklineContextChar guifg=#61AFEF gui=nocombine]])
       vim.cmd([[highlight IndentBlanklineSpaceChar guifg=#5c6370 gui=nocombine]])
