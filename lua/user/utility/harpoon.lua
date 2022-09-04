@@ -29,8 +29,8 @@ harpoon.setup(configs)
 
 local opts = { noremap = true, silent = true }
 
--- vim.keymap.set("n", "<C-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
-vim.keymap.set("n", "<C-1>", "<cmd>OpenHarpoonNav<CR>", opts)
+vim.keymap.set("n", "<C-1>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", opts)
+-- vim.keymap.set("n", "<C-1>", "<cmd>OpenHarpoonNav<CR>", opts)
 vim.keymap.set("n", "<C-2>", "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", opts)
 vim.keymap.set("n", "<C-3>", "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", opts)
 vim.keymap.set("n", "<C-4>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", opts)

@@ -8,4 +8,4 @@ require("user.utility.zen")
 require("user.utility.harpoon")
 require("user.utility.which-key")
 
-require("user.utility.navic")
+-- require("user.utility.navic") -- not work

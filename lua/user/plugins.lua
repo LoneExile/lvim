@@ -69,10 +69,10 @@ lvim.plugins = {
   {
     "folke/zen-mode.nvim",
   },
-  {
-    "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig",
-  },
+  -- {
+  --   "SmiteshP/nvim-navic",
+  --   requires = "neovim/nvim-lspconfig",
+  -- },
   { "ThePrimeagen/harpoon" },
 
   -- copilot

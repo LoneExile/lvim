@@ -155,5 +155,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     -- vim.cmd([[highlight lualine_d_inactive guifg=#a0a1a7 guibg=none]])
   end,
 })
-
-lvim.builtin.lualine.options.theme = theme
