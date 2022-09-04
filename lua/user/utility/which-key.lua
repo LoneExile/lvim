@@ -1,14 +1,5 @@
 -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
--- }
+
 -- lvim.builtin.which_key.vmappings["z"] = {
 -- 	"<cmd><C-U>Lspsaga range_code_action<CR>",
 -- 	"Diagnostics",
@@ -110,28 +101,17 @@ lvim.builtin.which_key.mappings = {
       "<cmd>lua require('harpoon.mark').add_file()<cr>",
       "Add File",
     },
+    A = {
+      "<cmd>OpenHarpoonAll<cr>",
+      "Open all",
+    },
     k = {
       "<cmd>lua require('harpoon.ui').nav_prev()<cr>",
       "Previous",
     },
     j = { "<cmd>lua require('harpoon.ui').nav_next() <cr>", "Next" },
-    -- S = {
-    --   "<cmd>PackerStatus<cr>",
-    --   "Status",
-    -- },
-    -- u = {
-    --   "<cmd>PackerUpdate<cr>",
-    --   "Update",
-    -- },
   },
 
-  -- " Available Debug Adapters:
-  -- "   https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
-  -- " Adapter configuration and installation instructions:
-  -- "   https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
-  -- " Debug Adapter protocol:
-  -- "   https://microsoft.github.io/debug-adapter-protocol/
-  -- " Debugging
   g = {
     name = "Git",
     j = {
@@ -187,21 +167,12 @@ lvim.builtin.which_key.mappings = {
       "Git Diff",
     },
   },
-  -- t = {
-  -- 	name = "+Trouble",
-  -- 	r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  -- 	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  -- 	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-  -- 	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  -- 	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  -- 	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
-  -- },
   l = {
     name = "LSP",
-    -- d = {
-    -- 	"<cmd>Trouble document_diagnostics<cr>",
-    -- 	"Diagnostics",
-    -- },
+    d = {
+      "<cmd>Trouble document_diagnostics<cr>",
+      "Diagnostics",
+    },
     D = {
       "<cmd>Trouble workspace_diagnostics<cr>",
       "Diagnostics All",
@@ -210,10 +181,6 @@ lvim.builtin.which_key.mappings = {
       "<cmd>Trouble lsp_references<cr>",
       "References",
     },
-    -- c = {
-    -- 	"<cmd>Lspsaga code_action<CR>",
-    -- 	"Code Action",
-    -- },
     o = {
       "<cmd>LSoutlineToggle<cr>",
       "Outline",
@@ -226,31 +193,20 @@ lvim.builtin.which_key.mappings = {
       "<cmd>Lspsaga rename<CR>",
       "Rename",
     },
-    -- j = {
-    -- 	"<cmd>Lspsaga diagnostic_jump_next<CR>",
-    -- 	"Next Diagnostic",
-    -- },
-    -- k = {
-    -- 	"<cmd>Lspsaga diagnostic_jump_prev<CR>",
-    -- 	"Prev Diagnostic",
-    -- },
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
-    -- w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
+    q = { vim.diagnostic.setloclist, "Quickfix" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     I = {
       "<cmd>LspInstallInfo<cr>",
       "Installer Info",
     },
-    -- j = {
-    --   vim.diagnostic.goto_next,
-    --   "Next Diagnostic",
-    -- },
-    -- k = {
-    --   vim.diagnostic.goto_prev,
-    --   "Prev Diagnostic",
-    -- },
+    -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
+    -- w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     -- l = { vim.lsp.codelens.run, "CodeLens Action" },
+    -- c = {
+    -- 	"<cmd>Lspsaga code_action<CR>",
+    -- 	"Code Action",
+    -- },
     C = {
       name = "Codi",
       c = {
@@ -281,8 +237,6 @@ lvim.builtin.which_key.mappings = {
         "Implementation",
       },
     },
-    -- q = { vim.diagnostic.setloclist, "Quickfix" },
-    -- r = { vim.lsp.buf.rename, "Rename" },
     -- s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
     -- S = {
     --   "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
@@ -410,10 +364,10 @@ lvim.builtin.which_key.mappings = {
       "<cmd>Telescope commands<cr>",
       "Commands",
     },
-    -- p = {
-    -- 	"<cmd>lua require('telescope.builtin.internal').colorscheme({enable_preview = true})<cr>",
-    -- 	"Colorscheme with Preview",
-    -- },
+    p = {
+      "<cmd>lua require('telescope.builtin').colorscheme({enable_preview = true})<cr>",
+      "Colorscheme with Preview",
+    },
   },
   -- r = {
   -- 	name = "Refactor",

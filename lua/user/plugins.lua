@@ -69,6 +69,10 @@ lvim.plugins = {
   {
     "folke/zen-mode.nvim",
   },
+  {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
+  },
 
   -- copilot
   -- { "github/copilot.vim" },
