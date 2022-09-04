@@ -7,6 +7,8 @@ require("user.lsp.cmp")
 require("user.lsp.refactoring")
 -- require("user.lsp.trouble") -- not working
 
+require("lspconfig.ui.windows").default_options.border = "single"
+
 lvim.lsp.buffer_mappings = {
   normal_mode = {
     ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "Show hover" },

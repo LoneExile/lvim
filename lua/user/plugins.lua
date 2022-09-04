@@ -73,6 +73,7 @@ lvim.plugins = {
     "SmiteshP/nvim-navic",
     requires = "neovim/nvim-lspconfig",
   },
+  { "ThePrimeagen/harpoon" },
 
   -- copilot
   -- { "github/copilot.vim" },
@@ -89,5 +90,4 @@ lvim.plugins = {
     "zbirenbaum/copilot-cmp",
     module = "copilot_cmp",
   },
-  { "ThePrimeagen/harpoon" },
 }
