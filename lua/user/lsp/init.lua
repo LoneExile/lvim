@@ -7,7 +7,9 @@ require("user.lsp.cmp")
 require("user.lsp.refactoring")
 -- require("user.lsp.trouble") -- not working
 
-require("lspconfig.ui.windows").default_options.border = "single"
+require("lspconfig.ui.windows").default_options.border = "single" -- border lsp info
+
+vim.g.python3_host_prog = "$HOME/.pyenv/versions/nvim/bin/python"
 
 lvim.lsp.buffer_mappings = {
   normal_mode = {
