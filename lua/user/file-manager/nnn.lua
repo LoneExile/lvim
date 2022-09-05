@@ -13,11 +13,11 @@ local cfg = {
     cmd = "nnn", -- command override (-F1 flag is implied, -a flag is invalid!)
     width = 24, -- width of the vertical split
     side = "topleft", -- or "botright", location of the explorer window
-    session = "", -- or "global" / "local" / "shared"
+    session = "global", -- or "global" / "local" / "shared"
     tabs = true, -- separate nnn instance per tab
   },
   picker = {
-    cmd = "nnn -erPp", -- command override (-p flag is implied)
+    cmd = "nnn -er", -- command override (-p flag is implied)
     style = {
       width = 0.9, -- percentage relative to terminal size when < 1, absolute otherwise
       height = 0.8, -- ^
@@ -26,7 +26,7 @@ local cfg = {
       -- border = "single", -- border decoration for example "rounded"(:h nvim_open_win)
       border = "rounded",
     },
-    session = "", -- or "global" / "local" / "shared"
+    session = "glocal", -- or "global" / "local" / "shared"
   },
   auto_open = {
     setup = nil, -- or "explorer" / "picker", auto open on setup function

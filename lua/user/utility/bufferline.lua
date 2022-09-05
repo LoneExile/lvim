@@ -14,8 +14,9 @@
 -- end
 
 -- lvim.builtin.bufferline.options.diagnostics_indicator = diagnostics_indicator
--- lvim.builtin.bufferline.options.diagnostics_indicator = ""
--- lvim.builtin.bufferline.options.diagnostics = ""
+lvim.builtin.bufferline.options.diagnostics_indicator = ""
+lvim.builtin.bufferline.options.diagnostics = ""
+-- lvim.builtin.bufferline.options.buffer_close_icon = false
 
-vim.opt.showtabline = 0
-lvim.builtin.bufferline.active = false
+-- vim.opt.showtabline = 0
+-- lvim.builtin.bufferline.active = false
