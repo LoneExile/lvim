@@ -1,12 +1,3 @@
-local screen_w = vim.opt.columns:get()
-local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-local _width = screen_w
-local _height = screen_h
-local width = math.floor(_width)
-local height = math.floor(_height)
-local center_y = (vim.opt.lines:get() - _height) / 2
-local center_x = (screen_w - _width) / 2
-
 lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
 lvim.builtin.nvimtree.setup.view = {
   width = 30,
@@ -34,3 +25,22 @@ lvim.builtin.nvimtree.setup.view = {
     },
   },
 }
+local function telescope_find_files(_)
+  require("lvim.core.nvimtree").start_telescope("find_files")
+end
+
+local function telescope_live_grep(_)
+  require("lvim.core.nvimtree").start_telescope("live_grep")
+end
+
+if #lvim.builtin.nvimtree.setup.view.mappings.list == 0 then
+  lvim.builtin.nvimtree.setup.view.mappings.list = {
+    { key = { "h", "<CR>", "o" }, action = "edit", mode = "n" },
+    { key = "l", action = "close_node" },
+    { key = "<Esc>", action = "NvimTreeClose" },
+    { key = "v", action = "vsplit" },
+    { key = "C", action = "cd" },
+    { key = "gtf", action = "telescope_find_files", action_cb = telescope_find_files },
+    { key = "gtg", action = "telescope_live_grep", action_cb = telescope_live_grep },
+  }
+end

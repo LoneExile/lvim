@@ -44,7 +44,7 @@ lvim.plugins = {
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky header
 
   -- utility
-  { "unblevable/quick-scope" }, -- jumpy but in line
+  -- { "unblevable/quick-scope" }, -- jumpy but in line
   { "norcalli/nvim-colorizer.lua" }, --color highlighter
   { "phaazon/hop.nvim" }, -- EasyMotion
   { "nacro90/numb.nvim" }, -- Peek lines just when you intend
@@ -65,6 +65,7 @@ lvim.plugins = {
   { "tpope/vim-surround" }, -- Delete/change/add parentheses/quotes,
   -- { "svermeulen/vim-yoink" }, -- maintains a yank history to cycle between
   -- { "svermeulen/vim-subversive" }, -- operator motions to quickly replace text
+  { "echasnovski/mini.nvim" },
 
   {
     "folke/zen-mode.nvim",

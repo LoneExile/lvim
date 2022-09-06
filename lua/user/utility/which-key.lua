@@ -320,6 +320,14 @@ lvim.builtin.which_key.mappings = {
   },
   s = {
     name = "Search",
+    s = {
+      "<cmd>lua require('spectre').open_file_search()<CR>",
+      "Search in current file",
+    },
+    S = {
+      "<cmd>lua require('spectre').open()<CR>",
+      "Search in project",
+    },
     b = {
       "<cmd>Telescope git_branches<cr>",
       "Checkout branch",
