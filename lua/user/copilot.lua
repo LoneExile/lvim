@@ -19,41 +19,31 @@
 
 local status_ok, copilot = pcall(require, "copilot")
 if not status_ok then
-	return
+  vim.notify("copilot" .. " not found!")
+  return
 end
 
 local config = {
-	cmp = {
-		enabled = true,
-		method = "getCompletionsCycling",
-	},
-	panel = { -- no config options yet
-		enabled = true,
-	},
-	-- ft_disable = { "markdown" },
-	plugin_manager_path = vim.fn.expand("$HOME")
-		.. "/.local/share/lunarvim/site/pack/packer",
+  cmp = {
+    enabled = true,
+    method = "getCompletionsCycling",
+  },
+  panel = { -- no config options yet
+    enabled = true,
+  },
+  -- ft_disable = { "markdown" },
+  plugin_manager_path = vim.fn.expand("$HOME")
+    .. "/.local/share/lunarvim/site/pack/packer",
+  -- plugin_manager_path = vim.fn.stdpath "data" .. "/site/pack/packer",
+  -- server_opts_overrides = {
+  --   -- trace = "verbose",
+  --   settings = {
+  --     advanced = {
+  --       -- listCount = 10, -- #completions for panel
+  --       inlineSuggestCount = 3, -- #completions for getCompletions
+  --     },
+  --   },
+  -- },
 }
-
--- local config2 = {
--- 	cmp = {
--- 		enabled = true,
--- 		method = "getCompletionsCycling",
--- 	},
--- 	panel = { -- no config options yet
--- 		enabled = true,
--- 	},
--- 	ft_disable = { "markdown" },
--- 	-- plugin_manager_path = vim.fn.stdpath "data" .. "/site/pack/packer",
--- 	server_opts_overrides = {
--- 		-- trace = "verbose",
--- 		settings = {
--- 			advanced = {
--- 				-- listCount = 10, -- #completions for panel
--- 				inlineSuggestCount = 3, -- #completions for getCompletions
--- 			},
--- 		},
--- 	},
--- }
 
 copilot.setup(config)

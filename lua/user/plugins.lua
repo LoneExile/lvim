@@ -1,8 +1,9 @@
 -- Additional Plugins
 lvim.plugins = {
   -- theme
-  { "folke/tokyonight.nvim" },
-  -- { "lunarvim/synthwave84.nvim" }, { "lunarvim/horizon.nvim" },
+  -- { "folke/tokyonight.nvim" },
+  -- { "lunarvim/synthwave84.nvim" },
+  -- { "lunarvim/horizon.nvim" },
   -- { "joshdick/onedark.vim" },
   -- { "cocopon/iceberg.vim" },
   -- { "rebelot/kanagawa.nvim" },
@@ -46,7 +47,7 @@ lvim.plugins = {
   -- utility
   -- { "unblevable/quick-scope" }, -- jumpy but in line
   { "norcalli/nvim-colorizer.lua" }, --color highlighter
-  { "phaazon/hop.nvim" }, -- EasyMotion
+  -- { "phaazon/hop.nvim" }, -- EasyMotion
   { "nacro90/numb.nvim" }, -- Peek lines just when you intend
   -- { "andymass/vim-matchup" }, -- highlight, navigate, and operate on sets of matching text
   {

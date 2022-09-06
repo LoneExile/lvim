@@ -29,3 +29,67 @@ require("mini.surround").setup({
   -- see `:h MiniSurround.config`.
   search_method = "cover",
 })
+
+require("mini.jump2d").setup({
+  -- Function producing jump spots (byte indexed) for a particular line.
+  -- For more information see |MiniJump2d.start|.
+  -- If `nil` (default) - use |MiniJump2d.default_spotter|
+  spotter = nil,
+
+  -- Characters used for labels of jump spots (in supplied order)
+  labels = "abcdefghijklmnopqrstuvwxyz",
+
+  -- Which lines are used for computing spots
+  allowed_lines = {
+    blank = true, -- Blank line (not sent to spotter even if `true`)
+    cursor_before = true, -- Lines before cursor line
+    cursor_at = true, -- Cursor line
+    cursor_after = true, -- Lines after cursor line
+    fold = true, -- Start of fold (not sent to spotter even if `true`)
+  },
+
+  -- Which windows from current tabpage are used for visible lines
+  allowed_windows = {
+    current = true,
+    not_current = true,
+  },
+
+  -- Functions to be executed at certain events
+  hooks = {
+    before_start = nil, -- Before jump start
+    after_jump = nil, -- After jump was actually done
+  },
+
+  -- Module mappings. Use `''` (empty string) to disable one.
+  mappings = {
+    start_jumping = "<CR>",
+  },
+})
+
+-- require("mini.sessions").setup({
+--   -- Whether to read latest session if Neovim opened without file arguments
+--   autoread = false,
+
+--   -- Whether to write current session before quitting Neovim
+--   autowrite = true,
+
+--   -- Directory where global sessions are stored (use `''` to disable)
+--   directory = "", --<"session" subdir of user data directory from |stdpath()|>,
+
+--   -- File for local session (use `''` to disable)
+--   file = "Session.vim",
+
+--   -- Whether to force possibly harmful actions (meaning depends on function)
+--   force = { read = false, write = true, delete = false },
+
+--   -- Hook functions for actions. Default `nil` means 'do nothing'.
+--   hooks = {
+--     -- Before successful action
+--     pre = { read = nil, write = nil, delete = nil },
+--     -- After successful action
+--     post = { read = nil, write = nil, delete = nil },
+--   },
+
+--   -- Whether to print session path after action
+--   verbose = { read = false, write = true, delete = true },
+-- })

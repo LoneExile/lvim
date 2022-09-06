@@ -1,5 +1,3 @@
--- require('nvim-ts-autotag').setup()
-
 local status_ok, treesitterConfigs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   vim.notify("nvim-treesitter.configs" .. " not found!")

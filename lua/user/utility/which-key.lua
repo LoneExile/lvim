@@ -169,14 +169,16 @@ lvim.builtin.which_key.mappings = {
   },
   l = {
     name = "LSP",
-    d = {
-      "<cmd>Trouble document_diagnostics<cr>",
-      "Diagnostics",
-    },
-    D = {
-      "<cmd>Trouble workspace_diagnostics<cr>",
-      "Diagnostics All",
-    },
+    -- d = {
+    --   "<cmd>Trouble document_diagnostics<cr>",
+    --   "Diagnostics",
+    -- },
+    -- D = {
+    --   "<cmd>Trouble workspace_diagnostics<cr>",
+    --   "Diagnostics All",
+    -- },
+    d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
+    w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     r = {
       "<cmd>Trouble lsp_references<cr>",
       "References",
@@ -196,17 +198,14 @@ lvim.builtin.which_key.mappings = {
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     q = { vim.diagnostic.setloclist, "Quickfix" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = {
-      "<cmd>LspInstallInfo<cr>",
-      "Installer Info",
+    I = { "<cmd>Mason<cr>", "Mason Info" },
+    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+    S = {
+      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+      "Workspace Symbols",
     },
-    -- d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
-    -- w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
-    -- l = { vim.lsp.codelens.run, "CodeLens Action" },
-    -- c = {
-    -- 	"<cmd>Lspsaga code_action<CR>",
-    -- 	"Code Action",
-    -- },
+    e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
+
     C = {
       name = "Codi",
       c = {
