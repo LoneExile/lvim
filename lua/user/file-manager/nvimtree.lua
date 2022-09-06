@@ -20,8 +20,9 @@ lvim.builtin.nvimtree.setup.view = {
       width = 30,
       height = 40,
       row = 1,
-      col = 160,
       -- col = 1,
+      -- col = 80,
+      col = 160,
     },
   },
 }
@@ -37,7 +38,7 @@ if #lvim.builtin.nvimtree.setup.view.mappings.list == 0 then
   lvim.builtin.nvimtree.setup.view.mappings.list = {
     { key = { "h", "<CR>", "o" }, action = "edit", mode = "n" },
     { key = "l", action = "close_node" },
-    { key = "<Esc>", action = "NvimTreeClose" },
+    -- { key = "<Esc>", action = "NvimTreeClose" },
     { key = "v", action = "vsplit" },
     { key = "C", action = "cd" },
     { key = "gtf", action = "telescope_find_files", action_cb = telescope_find_files },

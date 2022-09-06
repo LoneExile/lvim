@@ -2,10 +2,7 @@
 local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
   {
-    -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "prettier",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = {
       "--no-semi",
       "--single-quote",
@@ -17,8 +14,7 @@ formatters.setup({
       -- "--config",
       -- "./Path"
     },
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    -- filetypes = { "typescript", "typescriptreact", "json" },
+    filetypes = { "typescript", "typescriptreact", "json", "javascript" },
     disabled_filetypes = { "lua", "python" },
     extra_filetypes = { "toml" },
   },
@@ -28,6 +24,7 @@ formatters.setup({
   },
   {
     command = "black",
+    filetypes = { "python" },
     extra_args = { "--fast", "--line-length", "90" },
   },
   -- {
@@ -54,16 +51,11 @@ linters.setup({
     extra_args = { "--max-line-length", "90" },
   },
   {
-    -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "shellcheck",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = { "--severity", "warning" },
   },
   {
     command = "codespell",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    -- filetypes = { "javascript", "python", "typescript", "typescriptreact" },
   },
   {
     command = "eslint",
@@ -145,10 +137,7 @@ codeaction.setup({
   --   args = { "--json" },
   -- },
   {
-    -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#Configuration
     command = "shellcheck",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = { "--severity", "warning" },
   },
 })

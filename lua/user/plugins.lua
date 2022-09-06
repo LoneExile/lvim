@@ -45,9 +45,7 @@ lvim.plugins = {
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky header
 
   -- utility
-  -- { "unblevable/quick-scope" }, -- jumpy but in line
   { "norcalli/nvim-colorizer.lua" }, --color highlighter
-  -- { "phaazon/hop.nvim" }, -- EasyMotion
   { "nacro90/numb.nvim" }, -- Peek lines just when you intend
   -- { "andymass/vim-matchup" }, -- highlight, navigate, and operate on sets of matching text
   {
@@ -61,9 +59,8 @@ lvim.plugins = {
   }, -- interactive scratchpad
   -- { "luukvbaal/nnn.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
-  -- { "nvim-telescope/telescope-project.nvim" },
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."
-  { "tpope/vim-surround" }, -- Delete/change/add parentheses/quotes,
+  -- { "tpope/vim-surround" }, -- Delete/change/add parentheses/quotes,
   -- { "svermeulen/vim-yoink" }, -- maintains a yank history to cycle between
   -- { "svermeulen/vim-subversive" }, -- operator motions to quickly replace text
   { "echasnovski/mini.nvim" },
@@ -71,10 +68,6 @@ lvim.plugins = {
   {
     "folke/zen-mode.nvim",
   },
-  -- {
-  --   "SmiteshP/nvim-navic",
-  --   requires = "neovim/nvim-lspconfig",
-  -- },
   { "ThePrimeagen/harpoon" },
 
   -- copilot

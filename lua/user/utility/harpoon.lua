@@ -38,7 +38,7 @@ vim.keymap.set("n", "<C-5>", "<cmd>lua require('harpoon.ui').nav_file(5)<CR>", o
 
 vim.api.nvim_create_user_command("OpenHarpoonNav", function()
   require("harpoon.ui").nav_file(1)
-  vim.cmd("NvimTreeClose")
+  -- vim.cmd("NvimTreeClose")
   -- vim.cmd("lua require('harpoon.ui').nav_file(1)")
 end, {})
 
@@ -52,5 +52,5 @@ vim.api.nvim_create_user_command("OpenHarpoonAll", function()
   require("harpoon.ui").nav_file(7)
   require("harpoon.ui").nav_file(8)
   require("harpoon.ui").nav_file(9)
-  vim.cmd("NvimTreeClose")
+  -- vim.cmd("NvimTreeClose")
 end, {})
