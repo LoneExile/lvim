@@ -5,9 +5,10 @@
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pylsp", opts)
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "zk", "remark" })
+local opts = {} -- check the lspconfig documentation for a list of all possible options
+require("lvim.lsp.manager").setup("marksman", opts)
+-- require("lvim.lsp.manager").setup("zk", opts)
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
@@ -24,3 +25,30 @@
 --   --Enable completion triggered by <c-x><c-o>
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
+
+-------------------------------------------------------------------------------------
+-- lvim.lsp.automatic_configuration.skipped_filetypes = { "rst", "plaintext" }
+
+-- lvim.builtin.mason.ui = {
+--   border = {
+--     relative = "editor",
+--     border = "rounded",
+--     width = 30,
+--     height = 40,
+--     row = 1,
+--     -- col = 1,
+--     -- col = 80,
+--     col = 160,
+--   },
+--   keymaps = {
+--     toggle_package_expand = "<CR>",
+--     install_package = "i",
+--     update_package = "u",
+--     check_package_version = "c",
+--     update_all_packages = "U",
+--     check_outdated_packages = "C",
+--     uninstall_package = "X",
+--     cancel_installation = "<C-c>",
+--     apply_language_filter = "<C-f>",
+--   },
+-- }

@@ -18,6 +18,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "cpp",
   "haskell",
   "help",
+  "markdown",
 }
 
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }

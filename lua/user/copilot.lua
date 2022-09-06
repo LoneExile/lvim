@@ -19,6 +19,7 @@
 
 local status_ok, copilot = pcall(require, "copilot")
 if not status_ok then
+  -- print("copilot not found")
   vim.notify("copilot" .. " not found!")
   return
 end
@@ -35,15 +36,15 @@ local config = {
   plugin_manager_path = vim.fn.expand("$HOME")
     .. "/.local/share/lunarvim/site/pack/packer",
   -- plugin_manager_path = vim.fn.stdpath "data" .. "/site/pack/packer",
-  -- server_opts_overrides = {
-  --   -- trace = "verbose",
-  --   settings = {
-  --     advanced = {
-  --       -- listCount = 10, -- #completions for panel
-  --       inlineSuggestCount = 3, -- #completions for getCompletions
-  --     },
-  --   },
-  -- },
+  server_opts_overrides = {
+    trace = "verbose",
+    settings = {
+      advanced = {
+        listCount = 10, -- #completions for panel
+        inlineSuggestCount = 3, -- #completions for getCompletions
+      },
+    },
+  },
 }
 
 copilot.setup(config)
