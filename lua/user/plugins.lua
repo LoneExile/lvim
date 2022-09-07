@@ -69,6 +69,13 @@ lvim.plugins = {
     "folke/zen-mode.nvim",
   },
   { "ThePrimeagen/harpoon" },
+  {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
+  },
 
   -- copilot
   -- { "github/copilot.vim" },

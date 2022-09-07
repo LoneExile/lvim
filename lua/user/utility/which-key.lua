@@ -376,6 +376,33 @@ lvim.builtin.which_key.mappings = {
       "Colorscheme with Preview",
     },
   },
+  u = {
+    name = "Utility",
+    c = {
+      name = "+Color picker",
+      p = {
+        "<cmd>Colortils picker<cr>",
+        "picker",
+      },
+      l = {
+        "<cmd>Colortils lighten<cr>",
+        "lighten",
+      },
+      d = {
+        "<cmd>Colortils darken<cr>",
+        "darken",
+      },
+      s = {
+        "<cmd>Colortils greyscale<cr>",
+        "greyscale",
+      },
+      g = {
+        "<cmd>Colortils gradient<cr>",
+        "gradient",
+      },
+    },
+  },
+
   -- r = {
   -- 	name = "Refactor",
   -- 	e = {

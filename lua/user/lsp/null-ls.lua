@@ -40,11 +40,13 @@ formatters.setup({
     filetypes = { "bash", "csh", "ksh", "sh", "zsh" },
     extra_args = { "$FILENAME" },
   },
+  { command = "markdownlint", filetypes = { "markdown" } },
 })
 
 -- set additional linters
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
+  { command = "markdownlint", filetypes = { "markdown" } },
   {
     command = "flake8",
     filetypes = { "python" },
