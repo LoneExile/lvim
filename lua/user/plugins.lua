@@ -8,12 +8,12 @@ lvim.plugins = {
   -- { "joshdick/onedark.vim" },
   -- { "cocopon/iceberg.vim" },
   -- { "rebelot/kanagawa.nvim" },
-  { "EdenEast/nightfox.nvim" },
   -- { "catppuccin/nvim" },
   -- { "projekt0n/github-nvim-theme" },
   -- { "marko-cerovac/material.nvim" },
   -- { "ellisonleao/gruvbox.nvim" },
   -- { "haishanh/night-owl.vim" },
+  { "EdenEast/nightfox.nvim" },
   { "glepnir/zephyr-nvim" },
 
   -- debugger
@@ -60,6 +60,7 @@ lvim.plugins = {
     "metakirby5/codi.vim",
     cmd = "Codi",
   }, -- interactive scratchpad and buggy
+  { "michaelb/sniprun", run = "bash ./install.sh" },
   -- { "luukvbaal/nnn.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."

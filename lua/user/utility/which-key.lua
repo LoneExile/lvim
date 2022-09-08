@@ -5,8 +5,6 @@
 --   "Diagnostics",
 -- }
 
--- lvim.builtin.which_key.vmappings["o"] = { "<cmd>OpenBrowser<cr>", "OpenBrowser" }
-
 lvim.builtin.which_key.mappings = {
   ["e"] = { "<cmd>lua require'core.nvimtree'.toggle_tree()<CR>", "Explorer" },
   [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
@@ -223,6 +221,33 @@ lvim.builtin.which_key.mappings = {
         "Select",
       },
     },
+    c = {
+      name = "Sniprun",
+      c = {
+        "<cmd>lua require'sniprun'.run()<cr>",
+        "Run",
+      },
+      r = {
+        "<cmd>lua require'sniprun'.reset()<cr>",
+        "Reset",
+      },
+      s = {
+        "<cmd>lua require'sniprun.display'.close_all()<cr>",
+        "Stop",
+      },
+      l = {
+        "<cmd>lua require'sniprun.live_mode'.toggle()<cr>",
+        "Live",
+      },
+      i = {
+        "<cmd>lua require'sniprun'.info()<cr>",
+        "Info",
+      },
+      m = {
+        "<cmd>lua require'sniprun'.clear_repl(),cr>",
+        "Memory Clear",
+      },
+    },
     p = {
       name = "Peek",
       d = {
@@ -433,6 +458,11 @@ lvim.builtin.which_key.mappings = {
   -- 		"Debug Print Var",
   -- 	},
   -- },
+}
+
+lvim.builtin.which_key.vmappings["l"] = {
+  name = "LSP",
+  c = { name = "SnipRun", c = { "<cmd>lua require'sniprun'.run('v')<cr>", "Run" } },
 }
 
 lvim.builtin.terminal.execs = {
