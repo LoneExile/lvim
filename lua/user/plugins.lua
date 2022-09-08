@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   -- theme
+  -- { "LunarVim/onedarker.nvim" },
   -- { "folke/tokyonight.nvim" },
   -- { "lunarvim/synthwave84.nvim" },
   -- { "lunarvim/horizon.nvim" },
@@ -13,6 +14,7 @@ lvim.plugins = {
   -- { "marko-cerovac/material.nvim" },
   -- { "ellisonleao/gruvbox.nvim" },
   -- { "haishanh/night-owl.vim" },
+  { "glepnir/zephyr-nvim" },
 
   -- debugger
   { "rcarriga/nvim-dap-ui" },
@@ -49,7 +51,8 @@ lvim.plugins = {
   { "nacro90/numb.nvim" }, -- Peek lines just when you intend
   -- { "andymass/vim-matchup" }, -- highlight, navigate, and operate on sets of matching text
   {
-    "windwp/nvim-spectre",
+    -- "windwp/nvim-spectre",
+    "LoneExile/nvim-spectre",
     -- ~/.local/share/lunarvim/site/pack/packer/start/nvim-spectre/build.sh
     requires = "nvim-lua/plenary.nvim",
   }, -- search and replace
@@ -76,6 +79,7 @@ lvim.plugins = {
       require("colortils").setup()
     end,
   },
+  { "dhruvasagar/vim-open-url" },
 
   -- copilot
   -- { "github/copilot.vim" },

@@ -1,9 +1,11 @@
 -- Use which-key to add extra bindings with the leader-key prefix
 
 -- lvim.builtin.which_key.vmappings["z"] = {
--- 	"<cmd><C-U>Lspsaga range_code_action<CR>",
--- 	"Diagnostics",
+--   "<cmd><C-U>Lspsaga range_code_action<CR>",
+--   "Diagnostics",
 -- }
+
+-- lvim.builtin.which_key.vmappings["o"] = { "<cmd>OpenBrowser<cr>", "OpenBrowser" }
 
 lvim.builtin.which_key.mappings = {
   ["e"] = { "<cmd>lua require'core.nvimtree'.toggle_tree()<CR>", "Explorer" },

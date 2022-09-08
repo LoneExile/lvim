@@ -1,6 +1,5 @@
 local components = require("lvim.core.lualine.components")
 local conditions = require("lvim.core.lualine.conditions")
--- local colors = require("lvim.core.lualine.colors")
 
 local colors = {
   red = "#ca1243",

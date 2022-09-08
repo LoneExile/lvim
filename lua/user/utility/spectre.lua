@@ -6,7 +6,7 @@ if not status_ok_code then
   return
 end
 
-local opts = { noremap = true, silent = true }
+-- local opts = { noremap = true, silent = true }
 
 -- vim.keymap.set("n", "s", "<cmd>lua require('spectre').open_file_search()<CR>", opts)
 -- vim.keymap.set("n", "S", "<cmd>lua require('spectre').open()<CR>", opts)

@@ -1,7 +1,7 @@
 local status_ok_code, colortils = pcall(require, "colortils")
 if not status_ok_code then
   vim.notify("colortils" .. " not found!")
-  print("colortils" .. " not found!")
+  -- print("colortils" .. " not found!")
   return
 end
 local configs = {

@@ -17,6 +17,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
       "StatusLine",
       "StatusLineNC",
       "WinBarNC",
+      -- "Define",
+      -- "Comment",
+      -- "FinderParam",
     }
     for _, name in ipairs(hl_groups) do
       vim.cmd(string.format("highlight %s ctermbg=none guibg=none", name))
