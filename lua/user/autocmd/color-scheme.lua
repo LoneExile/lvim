@@ -13,6 +13,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
       "FloatBorder",
       "NormalFloat",
       "VertSplit",
+      "WinBar",
+      "StatusLine",
+      "StatusLineNC",
+      "WinBarNC",
     }
     for _, name in ipairs(hl_groups) do
       vim.cmd(string.format("highlight %s ctermbg=none guibg=none", name))

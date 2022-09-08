@@ -1,7 +1,8 @@
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = false
-lvim.colorscheme = "onedarker"
+-- lvim.colorscheme = "onedarker"
+lvim.colorscheme = "duskfox"
 
 lvim.transparent_window = true
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages

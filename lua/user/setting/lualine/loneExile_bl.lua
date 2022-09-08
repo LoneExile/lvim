@@ -107,11 +107,11 @@ local bufferLine = {
 
 local theme = {
   normal = {
-    a = { fg = colors.black, bg = colors.blue },
+    a = { fg = colors.white, bg = "#265270" },
     -- b = { fg = colors.white, bg = colors.grey },
     -- b = { fg = colors.white, bg = "" },
     -- c = { fg = colors.black, bg = colors.white },
-    z = { fg = colors.black, bg = colors.blue },
+    z = { fg = colors.white, bg = "#265270" },
   },
   insert = { a = { fg = colors.black, bg = colors.light_green } },
   visual = { a = { fg = colors.black, bg = colors.violet } },

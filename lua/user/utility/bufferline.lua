@@ -1,6 +1,6 @@
-lvim.builtin.bufferline.options.diagnostics_indicator = ""
-lvim.builtin.bufferline.options.diagnostics = ""
-lvim.builtin.bufferline.options.buffer_close_icon = ""
+lvim.builtin.bufferline.options.diagnostics_indicator = nil
+lvim.builtin.bufferline.options.diagnostics = nil
+lvim.builtin.bufferline.options.buffer_close_icon = nil
 lvim.builtin.bufferline.options.indicator_icon = "▎" --"" ---"▎"
 
 -- turn off bufferline

@@ -400,6 +400,7 @@ lvim.builtin.which_key.mappings = {
         "<cmd>Colortils gradient<cr>",
         "gradient",
       },
+      L = { "<cmd>Colortils css list<cr>", "List" },
     },
   },
 

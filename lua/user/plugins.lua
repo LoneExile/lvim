@@ -7,7 +7,7 @@ lvim.plugins = {
   -- { "joshdick/onedark.vim" },
   -- { "cocopon/iceberg.vim" },
   -- { "rebelot/kanagawa.nvim" },
-  -- { "EdenEast/nightfox.nvim" },
+  { "EdenEast/nightfox.nvim" },
   -- { "catppuccin/nvim" },
   -- { "projekt0n/github-nvim-theme" },
   -- { "marko-cerovac/material.nvim" },
@@ -56,7 +56,7 @@ lvim.plugins = {
   {
     "metakirby5/codi.vim",
     cmd = "Codi",
-  }, -- interactive scratchpad
+  }, -- interactive scratchpad and buggy
   -- { "luukvbaal/nnn.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."
