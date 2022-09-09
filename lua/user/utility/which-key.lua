@@ -244,7 +244,7 @@ lvim.builtin.which_key.mappings = {
         "Info",
       },
       m = {
-        "<cmd>lua require'sniprun'.clear_repl(),cr>",
+        "<cmd>lua require'sniprun'.clear_repl()<cr>",
         "Memory Clear",
       },
     },

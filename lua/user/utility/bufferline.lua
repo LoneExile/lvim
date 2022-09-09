@@ -2,7 +2,222 @@ lvim.builtin.bufferline.options.diagnostics_indicator = nil
 lvim.builtin.bufferline.options.diagnostics = nil
 lvim.builtin.bufferline.options.buffer_close_icon = nil
 lvim.builtin.bufferline.options.indicator_icon = "▎" --"" ---"▎"
+-- lvim.builtin.bufferline.options.separator_style = "thick"
+lvim.builtin.bufferline.highlights = {
+  -- fill = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- background = {
+  --   guifg = "#FFF8DC",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- tab = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- tab_selected = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- tab_close = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- close_button = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- close_button_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- close_button_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- buffer_visible = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  -- },
+  buffer_selected = {
+    guifg = "#8A2BE2",
+    -- guibg = "#8A2BE2",
+    gui = "bold,italic",
+  },
+  -- diagnostic = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- diagnostic_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- diagnostic_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  -- },
+  -- info = {
+  --   guifg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- info_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- info_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- info_diagnostic = {
+  --   guifg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- info_diagnostic_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- info_diagnostic_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- warning = {
+  --   guifg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- warning_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- warning_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- warning_diagnostic = {
+  --   guifg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- warning_diagnostic_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- warning_diagnostic_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = warning_diagnostic_fg,
+  -- },
+  -- error = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- error_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- error_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- error_diagnostic = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- error_diagnostic_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- error_diagnostic_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  --   guisp = "<color-value-here>",
+  -- },
+  -- modified = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- modified_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- modified_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- duplicate_selected = {
+  --   guifg = "<color-value-here>",
+  --   gui = "italic",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- duplicate_visible = {
+  --   guifg = "<color-value-here>",
+  --   gui = "italic",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- duplicate = {
+  --   guifg = "<color-value-here>",
+  --   gui = "italic",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- separator_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- separator_visible = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- separator = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- indicator_selected = {
+  --   guifg = "<color-value-here>",
+  --   guibg = "<color-value-here>",
+  -- },
+  -- pick_selected = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  -- },
+  -- pick_visible = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  -- },
+  -- pick = {
+  --   guifg = "#8A2BE2",
+  --   guibg = "<color-value-here>",
+  --   gui = "bold,italic",
+  -- },
+} -- Optional
 
--- turn off bufferline
+----- BufferLineTogglePin
+
+----- turn off bufferline -----
 -- vim.opt.showtabline = 0
 -- lvim.builtin.bufferline.active = false
+
+-- LSOutlinePreviewBorder = { fg = '#52ad70' },
+--   OutlineIndentEvn = { fg = '#c955ae' },
+--   OutlineIndentOdd = { fg = '#b8733e' },
+--   OutlineFoldPrefix = { fg = '#bf4537' },
+--   OutlineDetail = { fg = '#73797e' },
+--   -- all floatwindow of lspsaga
+--   LspFloatWinNormal = { link = 'Normal' },

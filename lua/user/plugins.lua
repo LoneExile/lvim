@@ -13,8 +13,8 @@ lvim.plugins = {
   -- { "marko-cerovac/material.nvim" },
   -- { "ellisonleao/gruvbox.nvim" },
   -- { "haishanh/night-owl.vim" },
-  { "EdenEast/nightfox.nvim" },
-  { "glepnir/zephyr-nvim" },
+  -- { "EdenEast/nightfox.nvim" },
+  -- { "glepnir/zephyr-nvim" },
 
   -- debugger
   { "rcarriga/nvim-dap-ui" },
@@ -30,18 +30,15 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
     requires = "kyazdani42/nvim-web-devicons",
-    -- config = function()
-    -- 	require("trouble").setup()
-    -- end,
   },
-  { "windwp/nvim-ts-autotag" },
+  { "windwp/nvim-ts-autotag" }, -- auto tag
   {
     "ThePrimeagen/refactoring.nvim",
     requires = {
       { "nvim-lua/plenary.nvim" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-  },
+  }, -- refactor code
 
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky header
@@ -53,25 +50,22 @@ lvim.plugins = {
   {
     -- "windwp/nvim-spectre",
     "LoneExile/nvim-spectre",
-    -- ~/.local/share/lunarvim/site/pack/packer/start/nvim-spectre/build.sh
     requires = "nvim-lua/plenary.nvim",
   }, -- search and replace
   {
     "metakirby5/codi.vim",
     cmd = "Codi",
   }, -- interactive scratchpad and buggy
-  { "michaelb/sniprun", run = "bash ./install.sh" },
+  { "michaelb/sniprun", run = "bash ./install.sh" }, -- run code block/line
   -- { "luukvbaal/nnn.nvim" },
-  { "lukas-reineke/indent-blankline.nvim" },
+  { "lukas-reineke/indent-blankline.nvim" }, -- indent hl
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."
   -- { "tpope/vim-surround" }, -- Delete/change/add parentheses/quotes,
   -- { "svermeulen/vim-yoink" }, -- maintains a yank history to cycle between
   -- { "svermeulen/vim-subversive" }, -- operator motions to quickly replace text
-  { "echasnovski/mini.nvim" },
+  { "echasnovski/mini.nvim" }, -- lua code utility (surround, word jumping)
 
-  {
-    "folke/zen-mode.nvim",
-  },
+  { "folke/zen-mode.nvim" }, -- Zen mode
   { "ThePrimeagen/harpoon" },
   {
     "max397574/colortils.nvim",
@@ -79,8 +73,8 @@ lvim.plugins = {
     config = function()
       require("colortils").setup()
     end,
-  },
-  { "dhruvasagar/vim-open-url" },
+  }, -- color picker
+  { "dhruvasagar/vim-open-url" }, -- open url from vim
 
   -- copilot
   -- { "github/copilot.vim" },

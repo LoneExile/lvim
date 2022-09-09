@@ -4,6 +4,18 @@ if not status_ok then
   return
 end
 
+local colors = {
+  fg = "#bbc2cf",
+  red = "#e95678",
+  orange = "#FF8700",
+  yellow = "#f7bb3b",
+  green = "#afd700",
+  cyan = "#36d0e0",
+  blue = "#61afef",
+  violet = "#CBA6F7",
+  teal = "#1abc9c",
+}
+
 ------------------------------------------------------------------------------------------
 local config = {
   border_style = "rounded",
@@ -36,10 +48,34 @@ local config = {
     separator = "  ",
     click_support = false,
   },
-  -- custom_kind = {
-  -- 	Field = "#000099",
-  -- 	-- Field = { "Variable", "#009999" },
-  -- },
+  custom_kind = {
+    File = { " ", colors.fg },
+    Module = { " ", colors.blue },
+    Namespace = { " ", colors.orange },
+    Package = { " ", colors.violet },
+    Class = { " ", colors.violet },
+    Method = { " ", colors.violet },
+    Property = { " ", colors.cyan },
+    Field = { " ", colors.teal },
+    Constructor = { " ", colors.blue },
+    Enum = { "了", colors.green },
+    Interface = { " ", colors.orange },
+    Function = { " ", colors.violet },
+    Variable = { " ", colors.blue },
+    Constant = { " ", colors.cyan },
+    String = { " ", colors.green },
+    Number = { " ", colors.green },
+    Boolean = { " ", colors.orange },
+    Array = { " ", colors.blue },
+    Object = { " ", colors.orange },
+    Key = { " ", colors.red },
+    Null = { " ", colors.red },
+    EnumMember = { " ", colors.green },
+    Struct = { " ", colors.violet },
+    Event = { " ", colors.violet },
+    Operator = { " ", colors.green },
+    TypeParameter = { " ", colors.green },
+  },
 }
 
 lspsagaM.init_lsp_saga(config)
@@ -65,15 +101,14 @@ lspsagaM.init_lsp_saga(config)
 --   local path_list = vim.split(string.gsub(vim.fn.expand("%:~:.:h"), "%%", ""), sep)
 --   local file_path = ""
 --   for _, cur in ipairs(path_list) do
---     file_path = (cur == "." or cur == "~") and ""
---       or file_path .. cur .. " " .. "%#LspSagaWinbarSep#>%*" .. " %*"
+--     file_path = (cur == "." or cur == "~") and "" or file_path .. cur .. " " .. "%#LspSagaWinbarSep#>%*" .. " %*"
 --   end
 --   return file_path .. file_name
 -- end
 
 -- local function config_winbar_or_statusline()
 --   local exclude = {
---     ["teminal"] = true,
+--     ["terminal"] = true,
 --     ["toggleterm"] = true,
 --     ["prompt"] = true,
 --     ["NvimTree"] = true,

@@ -15,7 +15,7 @@ vim.g.python3_host_prog = "$HOME/.pyenv/versions/nvim/bin/python"
 lvim.lsp.buffer_mappings = {
   normal_mode = {
     ["K"] = { "<cmd>Lspsaga hover_doc<CR>", "Show hover" },
-    ["gd"] = { "<cmd>Lspsaga preview_definition<CR>", "Goto Definition" },
+    ["gd"] = { "<cmd>Lspsaga peek_definition<CR>", "Goto Definition" },
     ["gs"] = { vim.lsp.buf.signature_help, "show signature help" },
     ["gr"] = { "<cmd>Lspsaga lsp_finder<CR>", "Goto references" },
     ["gR"] = { "<cmd>Lspsaga rename<CR>", "rename" },
@@ -31,11 +31,12 @@ lvim.lsp.buffer_mappings = {
       "Peek definition",
     },
     ["gl"] = {
-      function()
-        local config = lvim.lsp.diagnostics.float
-        config.scope = "line"
-        vim.diagnostic.open_float(0, config)
-      end,
+      "<cmd>Lspsaga show_line_diagnostics<cr>",
+      -- function()
+      --   local config = lvim.lsp.diagnostics.float
+      --   config.scope = "line"
+      --   vim.diagnostic.open_float(0, config)
+      -- end,
       "Show line diagnostics",
     },
   },

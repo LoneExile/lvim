@@ -2,7 +2,6 @@
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
--- lvim.colorscheme = "duskfox"
 
 lvim.transparent_window = true
 vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
@@ -17,11 +16,6 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.cmp.experimental.ghost_text = false
 lvim.lsp.diagnostics.virtual_text = false
-
--- lvim.builtin.alpha.active = true
--- lvim.builtin.alpha.mode = "dashboard"
--- local vim_dashboard = require("user.setting.alpha")
--- lvim.builtin.alpha.dashboard = { config = {}, section = vim_dashboard.get_sections() }
 
 ---------------------
 

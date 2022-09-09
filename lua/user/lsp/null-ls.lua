@@ -20,21 +20,14 @@ formatters.setup({
   },
   {
     command = "stylua",
-    extra_args = { "--column-width", "90" },
+    extra_args = { "--column-width", "120" },
+    filetypes = { "lua" },
   },
   {
     command = "black",
     filetypes = { "python" },
     extra_args = { "--fast", "--line-length", "90" },
   },
-  -- {
-  -- 	command = "",
-  -- },
-  -- {
-  -- 	command = "isort",
-  -- 	filetypes = { "python" },
-  -- 	extra_args = { "--line-length", "30" },
-  -- },
   {
     command = "beautysh",
     filetypes = { "bash", "csh", "ksh", "sh", "zsh" },
@@ -80,16 +73,6 @@ linters.setup({
     },
   },
   -- {
-  -- 	command = "proselint",
-  -- 	filetypes = { "markdown", "tex" },
-  -- 	args = { "--json" },
-  -- },
-  -- {
-  -- 	command = "alex",
-  -- 	filetypes = { "markdown" },
-  -- 	extra_args = { "--stdin", "--quiet" },
-  -- },
-  -- {
   -- 	command = "hadolint",
   -- 	filetype = { "dockerfile" },
   -- 	extra_args = { "--no-fail", "--format=json", "-" },
@@ -133,11 +116,6 @@ codeaction.setup({
       "es6",
     },
   },
-  -- {
-  --   command = "proselint",
-  --   filetypes = { "markdown", "tex" },
-  --   args = { "--json" },
-  -- },
   {
     command = "shellcheck",
     extra_args = { "--severity", "warning" },
