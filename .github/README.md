@@ -1,6 +1,11 @@
 # lvim
 
-## for neovim
+![image](https://user-images.githubusercontent.com/82561297/189161326-230873ef-cd37-46b2-a1ac-74027a184804.png)
+![image](https://user-images.githubusercontent.com/82561297/189163225-303f644d-2143-4ec4-b7fb-aeb66bb6f4a5.png)
+![image](https://user-images.githubusercontent.com/82561297/189163851-515bc171-a734-4cc7-9498-487436669ffa.png)
+
+
+
 
 ```bash
 yay -S codespell xsel actionlint-bin # archlinux
