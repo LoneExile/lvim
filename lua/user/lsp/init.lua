@@ -6,6 +6,7 @@ require("user.lsp.codi")
 require("user.lsp.cmp")
 require("user.lsp.refactoring")
 require("user.lsp.sniprun")
+-- require("user.lsp.navic")
 -- require("user.lsp.trouble") -- not working
 
 require("lspconfig.ui.windows").default_options.border = "single" -- border lsp info

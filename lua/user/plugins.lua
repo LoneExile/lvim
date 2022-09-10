@@ -45,6 +45,13 @@ lvim.plugins = {
 
   -- utility
   { "norcalli/nvim-colorizer.lua" }, --color highlighter
+  {
+    "max397574/colortils.nvim",
+    cmd = "Colortils",
+    config = function()
+      require("colortils").setup()
+    end,
+  }, -- color picker
   { "nacro90/numb.nvim" }, -- Peek lines just when you intend
   -- { "andymass/vim-matchup" }, -- highlight, navigate, and operate on sets of matching text
   {
@@ -64,22 +71,35 @@ lvim.plugins = {
   -- { "svermeulen/vim-yoink" }, -- maintains a yank history to cycle between
   -- { "svermeulen/vim-subversive" }, -- operator motions to quickly replace text
   { "echasnovski/mini.nvim" }, -- lua code utility (surround, word jumping)
-
   { "folke/zen-mode.nvim" }, -- Zen mode
   { "ThePrimeagen/harpoon" },
-  {
-    "max397574/colortils.nvim",
-    cmd = "Colortils",
-    config = function()
-      require("colortils").setup()
-    end,
-  }, -- color picker
   { "dhruvasagar/vim-open-url" }, -- open url from vim
+  { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
 
   -- copilot
   -- { "github/copilot.vim" },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = { "VimEnter" },
+  --   config = function()
+  --     vim.defer_fn(function()
+  --       require("copilot").setup()
+  --     end, 100)
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   config = function()
+  --     require("copilot-cmp").setup()
+  --   end,
+  -- },
+
+  ---------- old
+  { "github/copilot.vim" },
   {
     "zbirenbaum/copilot.lua",
+    commit = "ede741d935cf5d962c9a9e44db2400ed1a4aaf13",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
@@ -89,6 +109,7 @@ lvim.plugins = {
   },
   {
     "zbirenbaum/copilot-cmp",
+    commit = "67825246fa2aa6226ec3320d554640aa4697e1b1",
     module = "copilot_cmp",
   },
 }

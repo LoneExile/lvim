@@ -5,10 +5,7 @@ lvim.lsp.automatic_servers_installation = false
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
-vim.list_extend(
-  lvim.lsp.automatic_configuration.skipped_servers,
-  { "zk", "remark-language-server" }
-)
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "zk", "remark-language-server" })
 local opts = {} -- check the lspconfig documentation for a list of all possible options
 require("lvim.lsp.manager").setup("marksman", opts)
 
@@ -54,3 +51,5 @@ require("lvim.lsp.manager").setup("marksman", opts)
 --     apply_language_filter = "<C-f>",
 --   },
 -- }
+
+-------------------------------------------------------------
