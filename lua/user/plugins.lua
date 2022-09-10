@@ -25,7 +25,7 @@ lvim.plugins = {
   { "mfussenegger/nvim-dap-python" },
 
   -- LSP
-  { "glepnir/lspsaga.nvim", branch = "main" },
+  { "glepnir/lspsaga.nvim", branch = "main", commit = "d6db461741ff5c0db93c55d95e75a25158ed404d" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",

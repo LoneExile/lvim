@@ -25,6 +25,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
       vim.cmd([[highlight IndentBlanklineContextChar guifg=#61AFEF gui=nocombine]])
       vim.cmd([[highlight IndentBlanklineSpaceChar guifg=#5c6370 gui=nocombine]])
       -- vim.cmd([[highlight IndentBlanklineContextStart guifg=#C678DD gui=underline]])
+
+      -- vim.cmd([[highlight TSComment guifg=#5c6370 ctermfg=14 gui=italic ]])
+      -- vim.cmd([[highlight TSFunction guifg=#61afef gui=italic ]])
     end
   end,
 })
