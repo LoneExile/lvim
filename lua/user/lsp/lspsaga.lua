@@ -39,6 +39,7 @@ local config = {
 }
 
 lspsagaM.init_lsp_saga(config)
+-- lspsagaM.init_lsp_saga({})
 
 ---------------------------------------------------------------------------------
 -- -------------- winbar --------------------------------------------------------
@@ -109,7 +110,7 @@ vim.api.nvim_create_autocmd(events, {
 --   end,
 -- })
 
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 local colors = {
   fg = "#bbc2cf",
   red = "#e95678",
@@ -129,9 +130,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
     for _, v in pairs(kind) do
-      vim.api.nvim_set_hl(0, prefix .. v[1], { fg = v[3] })
+      vim.api.nvim_set_hl(0, prefix .. v[1], { fg = v[3], italic = true })
     end
     vim.api.nvim_set_hl(0, winbar_sep, { fg = "#d16d9e" })
-    vim.api.nvim_set_hl(0, prefix .. "File", { fg = colors.fg, bold = true })
+    vim.api.nvim_set_hl(1, prefix .. "File", { fg = colors.fg, bold = true, italic = true })
   end,
 })

@@ -6,12 +6,12 @@ require("user.lsp.codi")
 require("user.lsp.cmp")
 require("user.lsp.refactoring")
 require("user.lsp.sniprun")
--- require("user.lsp.navic")
 -- require("user.lsp.trouble") -- not working
 
 require("lspconfig.ui.windows").default_options.border = "single" -- border lsp info
 
-vim.g.python3_host_prog = "$HOME/.pyenv/versions/nvim/bin/python"
+vim.g.python3_host_prog = "$HOME/.pyenv/versions/nvim/bin/python3"
+-- vim.g.python3_host_prog = "/home/bunlaikun/.pyenv/shims/python"
 
 lvim.lsp.buffer_mappings = {
   normal_mode = {

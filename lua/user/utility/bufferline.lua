@@ -1,20 +1,23 @@
 lvim.builtin.bufferline.options.diagnostics_indicator = nil
 lvim.builtin.bufferline.options.diagnostics = nil
 lvim.builtin.bufferline.options.buffer_close_icon = ""
-lvim.builtin.bufferline.options.indicator_icon = "▎" --"" ---"▎"
+lvim.builtin.bufferline.options.indicator_icon = nil
+lvim.builtin.bufferline.options.indicator = { style = "icon", icon = "▎" }
 -- lvim.builtin.bufferline.options.separator_style = "thick"
 lvim.builtin.bufferline.highlights = {
+  -- gui -> underline = true, undercurl = true, italic = true
   background = {
-    -- guifg = "#CBA6F7",
-    gui = "italic",
+    -- fg = "#CBA6F7",
+    italic = true,
   },
   buffer_selected = {
-    guifg = "#8A2BE2",
-    gui = "bold,italic",
+    fg = "#8A2BE2",
+    italic = true,
+    bold = true,
   },
   separator = {
-    guifg = "#CBA6F7",
-    -- guibg = "#8A2BE2",
+    fg = "#CBA6F7",
+    -- bg = "#8A2BE2",
   },
 } -- Optional
 

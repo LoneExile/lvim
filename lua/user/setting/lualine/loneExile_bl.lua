@@ -77,6 +77,10 @@ local treesitter = {
 local theme = {
   normal = {
     a = { fg = colors.white, bg = "#265270" },
+    b = { bg = nil },
+    c = { bg = nil },
+    x = { bg = nil },
+    y = { bg = nil },
     z = { fg = colors.white, bg = "#265270" },
   },
   insert = { a = { fg = colors.black, bg = colors.light_green } },

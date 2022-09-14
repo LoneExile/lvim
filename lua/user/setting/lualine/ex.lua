@@ -1,8 +1,6 @@
 local components = require("lvim.core.lualine.components")
 local conditions = require("lvim.core.lualine.conditions")
 
--- local navic = require("nvim-navic")
-
 lvim.builtin.lualine.sections = {
   lualine_a = {},
   lualine_b = {},
@@ -125,7 +123,6 @@ lvim.builtin.lualine = {
   -- on_config_done = {},
   -- winbar = {
   --   lualine_c = {
-  --     { navic.get_location, cond = navic.is_available },
   --   },
   -- },
 }

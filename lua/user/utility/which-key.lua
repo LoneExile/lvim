@@ -169,18 +169,10 @@ lvim.builtin.which_key.mappings = {
   },
   l = {
     name = "LSP",
-    -- d = {
-    --   "<cmd>Trouble document_diagnostics<cr>",
-    --   "Diagnostics",
-    -- },
-    -- D = {
-    --   "<cmd>Trouble workspace_diagnostics<cr>",
-    --   "Diagnostics All",
-    -- },
     d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
     w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
     r = {
-      "<cmd>Trouble lsp_references<cr>",
+      "<cmd>Lspsaga lsp_finder<cr>",
       "References",
     },
     o = {

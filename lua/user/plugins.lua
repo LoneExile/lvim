@@ -25,20 +25,10 @@ lvim.plugins = {
   { "mfussenegger/nvim-dap-python" },
 
   -- LSP
-  { "glepnir/lspsaga.nvim", branch = "main", commit = "d6db461741ff5c0db93c55d95e75a25158ed404d" },
-  {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-    requires = "kyazdani42/nvim-web-devicons",
-  },
+  -- { "glepnir/lspsaga.nvim", branch = "main", commit = "d6db461741ff5c0db93c55d95e75a25158ed404d" },
+  { "glepnir/lspsaga.nvim", branch = "main" },
   { "windwp/nvim-ts-autotag" }, -- auto tag
-  {
-    "ThePrimeagen/refactoring.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-      { "nvim-treesitter/nvim-treesitter" },
-    },
-  }, -- refactor code
+  { "ThePrimeagen/refactoring.nvim" }, -- refactor code
 
   -- Treesitter
   { "nvim-treesitter/nvim-treesitter-context" }, -- sticky header
@@ -67,14 +57,10 @@ lvim.plugins = {
   -- { "luukvbaal/nnn.nvim" },
   { "lukas-reineke/indent-blankline.nvim" }, -- indent hl
   { "tpope/vim-repeat" }, -- enable repeating supported plugin maps with "."
-  -- { "tpope/vim-surround" }, -- Delete/change/add parentheses/quotes,
-  -- { "svermeulen/vim-yoink" }, -- maintains a yank history to cycle between
-  -- { "svermeulen/vim-subversive" }, -- operator motions to quickly replace text
   { "echasnovski/mini.nvim" }, -- lua code utility (surround, word jumping)
   { "folke/zen-mode.nvim" }, -- Zen mode
   { "ThePrimeagen/harpoon" },
   { "dhruvasagar/vim-open-url" }, -- open url from vim
-  { "SmiteshP/nvim-navic", requires = "neovim/nvim-lspconfig" },
 
   -- copilot
   -- { "github/copilot.vim" },

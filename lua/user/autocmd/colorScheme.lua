@@ -5,6 +5,8 @@
 --   command = "setlocal wrap",
 -- })
 
+local group = vim.api.nvim_create_augroup("transparencyTheme", { clear = true })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
@@ -30,4 +32,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
       -- vim.cmd([[highlight TSFunction guifg=#61afef gui=italic ]])
     end
   end,
+  group = group,
 })
